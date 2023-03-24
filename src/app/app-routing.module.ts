@@ -4,11 +4,16 @@ import {HomeComponent} from "./home/home.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {TVShowsComponent} from "./tv-shows/tv-shows.component";
 import {MyListComponent} from "./my-list/my-list.component";
+import {MovieDetailsComponent} from "./movie-details/movie-details.component";
+import {FilterMovieAccessGuard} from "./guards/filter-movie-access.guard";
+import {CategoryComponent} from "./category/category.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'tv-shows', component: TVShowsComponent},
   {path: 'my-list', component: MyListComponent},
+  { path: 'movie/:id', component: MovieDetailsComponent, canActivate: [FilterMovieAccessGuard] },
+  {path: 'categories/:id', component: CategoryComponent},
   {path: '**',component: NotFoundComponent},
 ];
 
