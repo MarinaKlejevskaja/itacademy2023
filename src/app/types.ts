@@ -4,3 +4,8 @@ export interface Movie {
   imageUrl: string;
   categoryId: number;
 }
+
+export interface Category {
+  id: number;
+  title: string;
+}

@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
 import {moviesList} from "../shared/data";
-import {Movie} from "../movie";
+import {Category, Movie} from "../types";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
 
-  getMovies() {
+  getMovies():Movie[] {
     return moviesList.movies;
   }
 
@@ -15,7 +15,9 @@ export class MoviesService {
     return moviesList.movies.filter(movie => movie.id.toString() === movieId.toString())[0];
   }
 
-  getMoviesByCategory(categoryId: number) {
-    return moviesList.movies.filter(movie => movie.categoryId === categoryId);
+  getMoviesByCategory(categoryId: number):Movie[]{
+    return moviesList.movies.filter(movie => {
+      return categoryId === movie.categoryId;
+    });
   }
 }

@@ -4,9 +4,9 @@ import {HomeComponent} from "./home/home.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {TVShowsComponent} from "./tv-shows/tv-shows.component";
 import {MyListComponent} from "./my-list/my-list.component";
-import {MovieDetailsComponent} from "./movie-details/movie-details.component";
+import {MovieDetailsComponent} from "./movies/movie-details/movie-details.component";
 import {FilterMovieAccessGuard} from "./guards/filter-movie-access.guard";
-import {CategoryComponent} from "./category/category.component";
+import {CategoryComponent} from "./categories/category/category.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},

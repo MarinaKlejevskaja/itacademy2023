@@ -1,0 +1,7 @@
+<app-categories-list></app-categories-list>
+
+<div *ngIf="category">
+  <h2>{{category.title | uppercase}} list of movies</h2>
+<app-movies-list [categoryId]="category.id"></app-movies-list>
+</div>
+<div>test</div>

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {MoviesService} from "../services/movies.service";
+import {MoviesService} from "../../services/movies.service";
 import {ActivatedRoute} from "@angular/router";
-import {Movie} from "../movie";
+import {Movie} from "../../types";
 
 
 @Component({
